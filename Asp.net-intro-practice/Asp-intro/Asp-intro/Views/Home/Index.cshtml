@@ -1,0 +1,46 @@
+﻿@model int[]
+@* view a gonderilen datani @model ile qebul edirik*@
+
+
+
+@{
+    var count = 100;
+
+    List<string> names = new List<string>() { "Shaiq", "Konul", "Ceyhun" };
+}
+
+<h1>Home page</h1>
+
+<section id="home">
+    <div class="navbar">
+        <h3 style="color:red">Started backend</h3>
+      
+        <span>@count</span>
+
+        <ul>
+            @for (int i = 0; i < 15; i++)
+            {
+                <li>@count</li>
+                count++;
+            }
+        </ul>
+
+
+       @foreach (var item in names)
+        {
+            <h1>@item</h1>
+        }
+
+
+        @*Controllerden gonderilen datani @model ile qebul edib, Model ile goturub yazdirirq*@
+         @foreach (var item in Model)
+        {
+            <h1>@item</h1>
+        }
+
+    </div>
+</section>
+
+<script>
+    console.log("asdfghj")
+</script>
